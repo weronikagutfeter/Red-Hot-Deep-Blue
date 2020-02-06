@@ -1,0 +1,22 @@
+To run the code you need pytorch and tensorboard from tensorflow.
+
+Models should be put in 'models' directory or you can change paths by hand.
+Hard-coded paths to directories with images also need to be changed.
+
+You can download models from:
+1. thermal https://drive.google.com/open?id=1M-sa9CtXjVxGE8_0IFB8Lx9IgI_XmLF6
+2. depth https://drive.google.com/open?id=1mrIMbrtx6ej9MJ9Fbz9AYhEIlVdefXw6
+
+You can generate predictions using scripts:
+1. 'demo/run_eval_depth.py' for depth images
+2. 'demo/run_eval_thermal.py' for thermal images
+
+Correctly generated predictions are in:
+1. thermal for test https://drive.google.com/open?id=1wi_SwGmKCSaHYFlvnUsRG9x8DuTURaqg
+2. thermal for validation https://drive.google.com/open?id=1xwHAd_h0vm7ze68J4rt-sd0WRYeaIC7I
+3. depth for test https://drive.google.com/open?id=1-FENcFXrt0bwvCno5uDbI2zzuNEOQd_6
+4. depth for validation https://drive.google.com/open?id=1E3wbZKBSW2iNEKHSm3FP6pDM-g_3loD4
+
+
+Fusion is made basing on selected depth and thermal predictions.
+You can evaluate it using script 'demo/run_eval_fusion.py'
