@@ -1,4 +1,4 @@
-from evaluation.produce_pickle import object_detection_testing
+from eval import object_detection_testing
 import argparse
 
 
