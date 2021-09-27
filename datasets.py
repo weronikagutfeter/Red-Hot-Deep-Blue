@@ -20,8 +20,7 @@ class MaskType(Enum):
 
 class IPHDDataset(Dataset):
     def __init__(self, imdir=None, labeldir=None, filelisting = None, file_with_list=None, one_channel=False, hot=True, transforms=None, mask=MaskType.NoMask, fusion=False, labelpart='labels', preprocessing='none'):
-        # self.imdir = imdir
-        # self.labeldir = labeldir
+
         self.transforms = transforms
         self.one_channel = one_channel
         self.hot = hot
@@ -87,7 +86,7 @@ class IPHDDataset(Dataset):
                 second_img = second_img.resize((width,height),Image.ANTIALIAS)
                 second_img = np.array(second_img, dtype=np.double)
 
-                max_depth = 12000  # było 50
+                max_depth = 12000  # prev 50
                 second_img[second_img > max_depth] = max_depth
                 second_img = (second_img / max_depth)
 
